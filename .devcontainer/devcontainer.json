@@ -1,0 +1,21 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/ruby
+{
+  "name": "igaiga devcontainer",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "app",
+  "runServices": ["app"],
+  "workspaceFolder": "/home/circleci/project",
+  "remoteUser": "circleci",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+      ],
+      "settings": {
+        "ruby.useLanguageServer": true,
+        "ruby.useBundler": true
+      }
+    }
+  },
+  "postCreateCommand": "echo 'export PATH=./bin:$PATH' >> ~/.bashrc"
+}
