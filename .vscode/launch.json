@@ -7,7 +7,7 @@
       "request": "launch",
       "cwd": "${workspaceRoot}",
       "script": "bin/rails server",
-      "args": [],
+      "args": ["-b 0.0.0.0"],
       "askParameters": true,
       "useBundler": true,
     }
